@@ -1,0 +1,58 @@
+{
+  "content": ["posts"],
+  "i18n": {
+    "default_locale": "en",
+    "locales": ["en"]
+  },
+  "layers": [
+    {
+      "name": "Maptiler DataViz Style",
+      "layer_type": "vector",
+      "url": "https://api.maptiler.com/maps/dataviz/style.json?key=WLMbLZP1AwK3zUFTeheB"
+    },
+    {
+      "name": "USGS Imagery Topo (MapServer)",
+      "layer_type": "raster",
+      "url": "https://basemap.nationalmap.gov/arcgis/services/USGSImageryTopo/MapServer/WMSServer?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=0&styles=default"
+    },
+    {
+      "name": "USGS Topo (MapServer)",
+      "layer_type": "raster",
+      "foo": "https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer?bbox=%7Bbbox-epsg-3857%7D&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=0&styles=default",
+      "url": "https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=0&styles=default"
+    },
+    {
+      "name": "New Jersey Natural Earth (WMS)",
+      "layer_type": "raster",
+      "url": "https://img.nj.gov/imagerywms/Natural2015?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=Natural2015",
+      "overlay": true
+    },
+    {
+      "name": "US States",
+      "layer_type": "geojson",
+      "url": "gz_2010_us_040_00_20m.json",
+      "description": "Data from the United States Census Bureau. https://eric.clst.org/tech/usgeojson/",
+      "overlay": true
+    }
+  ],
+  "search": {
+    "cluster_radius": 6,
+    "result_card": {
+      "title": "83f862f6-f231-45f7-9bc1-66ef8c2eeaf3.0.name",
+      "subtitle": "name"
+    },
+    "timeline": false
+  },
+  "typesense": {
+    "host": "mk0zu5rvf46oa2h7p-1.a1.typesense.net",
+    "port": 443,
+    "protocol": "https",
+    "api_key": "u5wSsC0pezowgxnz8LN22Ux1Z9lfGqEw",
+    "index_name": "hurricane_sandy",
+    "query_by": "name"
+  },
+  "core_data": {
+    "url": "https://app.coredata.cloud",
+    "project_ids": [3]
+  }
+}
